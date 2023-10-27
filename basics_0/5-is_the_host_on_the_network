@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# The shebang line specifies the interpreter to be used for the script.
+
+# Bash script that pings an IP address passed as an argument.
+
+if [ $# -eq "0" ]
+# Check if the number of command-line arguments is equal to 0.
+then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    # If there are no arguments, print a usage message and exit.
+else
+    ping -c 5 "$1"
+    # If there is at least one argument, use the 'ping' command to send 5 ICMP echo requests to the specified IP address.
+    # "$1" represents the first command-line argument.
+fi
+
